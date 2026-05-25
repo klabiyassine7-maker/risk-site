@@ -205,3 +205,115 @@ footer{
     }
 
 }
+/* CODE GALLERY */
+
+.code-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.code-box{
+    background:#161b22;
+    padding:20px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.code-box:hover{
+    transform:translateY(-10px);
+    border-color:#f5c542;
+}
+
+.code-box img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.code-box h3{
+    color:#f5c542;
+    text-align:center;
+}
+.card-description{
+    opacity:0;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s;
+    color:#ccc;
+    margin-top:15px;
+    line-height:1.5;
+}
+
+.risk-card:hover .card-description{
+    opacity:1;
+    max-height:200px;
+}
+/* BOT SECTION */
+
+.bot-card{
+    min-height:250px;
+}
+
+.bot-card h3{
+    color:#f5c542;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.bot-card p{
+    color:#ccc;
+    line-height:1.8;
+    font-size:20px;
+}
+#bot{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:120px 10%;
+}
+
+#bot h2{
+    font-size:60px;
+    margin-bottom:50px;
+    color:#f5c542;
+}
+
+#bot .about-box{
+    max-width:1200px;
+    padding:50px;
+}
+
+#bot .about-box h3{
+    font-size:38px;
+    margin-bottom:25px;
+    color:white;
+}
+
+#bot .about-box p{
+    font-size:24px;
+    line-height:1.7;
+    color:#ddd;
+}
+#presentation{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:120px 10%;
+}
+
+#presentation h2{
+    font-size:60px;
+    margin-bottom:50px;
+    color:#f5c542;
+}
+
+#presentation p{
+    max-width:1200px;
+    font-size:24px;
+    line-height:1.7;
+    color:#ddd;
+}
