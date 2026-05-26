@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Risk Project - Développement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>RISK</h1>
+    <div class="links">
+        <a href="index.html">Accueil</a>
+        <a href="developpement.html">Développement</a>
+        <a href="groupe.html">Groupe</a>
+    </div>
+</nav>
+
+<section class="page-title">
+    <h2>Développement de l'application</h2>
+    <p>
+        Cette page explique les principales parties techniques du projet Risk :
+        le graphe, les cartes, les missions, le bot et le déroulement d’un tour.
+    </p>
+</section>
+
+<section>
+    <h2>Carte du jeu avec un graphe</h2>
+    <p class="big-text">
+        La carte du jeu est représentée avec NetworkX. Chaque territoire correspond
+        à un nœud du graphe, et chaque frontière entre deux territoires correspond
+        à une arête. Cette structure permet de vérifier facilement si une attaque est possible.
+    </p>
+
+    <div class="image-box">
+        <img src="risk_map.png.png " alt="Positions des territoires">
+    </div>
+</section>
+
+<section>
+    <h2>Système de cartes</h2>
+
+    <div class="cards-container">
+        <div class="risk-card" onclick="showCard('infanterie')">
+            <span>🪖</span>
+            <h3>Infanterie</h3>
+        </div>
+
+        <div class="risk-card" onclick="showCard('cavalerie')">
+            <span>🐎</span>
+            <h3>Cavalerie</h3>
+        </div>
+
+        <div class="risk-card" onclick="showCard('canon')">
+            <span>💣</span>
+            <h3>Canon</h3>
+        </div>
+
+        <div class="risk-card" onclick="showCard('joker')">
+            <span>🃏</span>
+            <h3>Joker</h3>
+        </div>
+    </div>
+
+    <div id="card-info" class="info-box">
+        Clique sur une carte pour voir son rôle.
+    </div>
+
+</section>
+
+<section>
+    <h2>Fonctionnement du bot</h2>
+
+    <div class="container">
+        <div class="card">
+            <h3>🧠 Analyse</h3>
+            <p>Le bot observe les territoires qu’il contrôle et les ennemis voisins.</p>
+        </div>
+
+        <div class="card">
+            <h3>🛡️ Renforts</h3>
+            <p>Il place ses troupes sur les territoires stratégiques.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚔️ Attaque</h3>
+            <p>Il attaque les territoires faibles pour agrandir son empire.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Déroulement d’un tour</h2>
+
+    <div class="timeline">
+        <div>
+            <h3>1. Renforts</h3>
+            <p>Le joueur reçoit des armées selon le nombre de territoires possédés.</p>
+        </div>
+
+        <div>
+            <h3>2. Attaque</h3>
+            <p>Le joueur peut attaquer un territoire voisin contrôlé par un adversaire.</p>
+        </div>
+
+        <div>
+            <h3>3. Conquête</h3>
+            <p>Si l’attaquant gagne, il prend le contrôle du territoire ennemi.</p>
+        </div>
+
+        <div>
+            <h3>4. Carte bonus</h3>
+            <p>Si le joueur conquiert au moins un territoire, il peut recevoir une carte.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Captures du code</h2>
+
+    <div class="code-gallery">
+        <div class="code-box">
+    <img src="adjacency.png.png" alt="Structure du graphe">
+
+    <h3>Structure du graphe</h3>
+
+    <p>
+        Cette partie définit toutes les connexions entre les territoires du jeu.
+    </p>
+</div>
+
+<div class="code-box">
+    <img src="hardbot.png.png" alt="Bot intelligent">
+
+    <h3>Bot intelligent</h3>
+
+    <p>
+        Le bot analyse les ennemis et choisit les meilleures attaques.
+    </p>
+</div>
+        <div class="code-box">
+            <img src="mission.png.png" alt="Code missions">
+            <h3>Système de missions</h3>
+            <p>Cette partie définit les objectifs que les joueurs doivent accomplir.</p>
+        </div>
+
+        <div class="code-box">
+            <img src="positions.png.png" alt="Code positions">
+            <h3>Positions des territoires</h3>
+            <p>Ces coordonnées permettent d’afficher les territoires au bon endroit sur la carte.</p>
+        </div>
+
+        <div class="code-box">
+            <img src="cardsystem.png.png" alt="Code cartes">
+            <h3>Système de cartes</h3>
+            <p>Cette partie gère les cartes Risk et leurs effets dans le jeu.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Projet Risk - Développement de l'application</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
