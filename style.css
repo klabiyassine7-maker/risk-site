@@ -317,3 +317,34 @@ footer{
     line-height:1.7;
     color:#ddd;
 }
+p{
+    font-size:26px !important;
+    line-height:1.8;
+}
+
+.page-title p{
+    font-size:30px !important;
+}
+
+.card p{
+    font-size:24px !important;
+}
+
+.timeline p{
+    font-size:24px !important;
+}
+
+.code-box p{
+    font-size:22px !important;
+}
+.image-box{
+    max-width:900px;
+    margin:40px auto;
+}
+
+.image-box img{
+    width:100%;
+    height:auto;
+    border-radius:20px;
+    border:2px solid #f5c542;
+}
